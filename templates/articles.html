@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статті</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Список статей</h1>
+        <a href="/add_article" class="btn btn-primary mb-3">Додати статтю</a>
+        <ul class="list-group">
+            {% for article in articles %}
+                <li class="list-group-item">
+                    <a href="/articles/{{ article.id }}">{{ article.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

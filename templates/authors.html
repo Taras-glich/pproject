@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автори</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Список авторів</h1>
+        <a href="/add_author" class="btn btn-primary mb-3">Додати автора</a>
+        <ul class="list-group">
+            {% for author in authors %}
+                <li class="list-group-item">{{ author.name }} - {{ author.email }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

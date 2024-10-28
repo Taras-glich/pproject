@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ article.title }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">{{ article.title }}</h1>
+        <p>{{ article.content }}</p>
+        <h3>Коментарі</h3>
+        <form method="post">
+            <div class="form-group">
+                <label for="author_name">Ваше ім'я</label>
+                <input type="text" name="author_name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="content">Коментар</label>
+                <textarea name="content" class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Додати коментар</button>
+        </form>
+    </div>
+</body>
+</html>
